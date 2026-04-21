@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using CidadesEsg.Api.Data;
 using CidadesEsg.Api.Endpoints;
 using Microsoft.EntityFrameworkCore;
@@ -8,6 +9,11 @@ var conn = builder.Configuration.GetConnectionString("Default")
     ?? "Host=localhost;Port=5432;Database=cidades_esg;Username=esg;Password=changeme";
 
 builder.Services.AddDbContext<AppDbContext>(opt => opt.UseNpgsql(conn));
+builder.Services.ConfigureHttpJsonOptions(opts =>
+{
+    opts.SerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+    opts.SerializerOptions.Converters.Add(new JsonStringEnumConverter());
+});
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -28,6 +34,7 @@ using (var scope = app.Services.CreateScope())
 
 app.MapHealth();
 app.MapCidades();
+app.MapIndicadores();
 
 app.Run();
 
