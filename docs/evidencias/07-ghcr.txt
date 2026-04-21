@@ -1,0 +1,18 @@
+========================================
+  EVIDÊNCIA 7 — IMAGENS NO GHCR
+========================================
+
+Imagens locais (pulled do GHCR):
+IMAGE                                                   ID             DISK USAGE   CONTENT SIZE   EXTRA
+cidades-esg-api:local                                   367a45603753        411MB          107MB        
+ghcr.io/artcgranja/cidades-esg-api:prod                 7163c6a4d65e        382MB          110MB   U    
+ghcr.io/artcgranja/cidades-esg-api:staging              f060b5399f4f        382MB          110MB   U    
+
+Metadados da imagem :staging (via docker inspect):
+[ghcr.io/artcgranja/cidades-esg-api:staging] | Arch: amd64 | Created: 2026-04-21T22:34:53.284392726Z
+
+Metadados da imagem :prod (via docker inspect):
+[ghcr.io/artcgranja/cidades-esg-api:prod] | Arch: amd64 | Created: 2026-04-21T22:36:35.565879508Z
+
+URL pública do pacote:
+  https://github.com/users/artcgranja/packages/container/package/cidades-esg-api

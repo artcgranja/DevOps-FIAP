@@ -1,0 +1,23 @@
+========================================
+  EVIDÊNCIA 3 — FLUXO END-TO-END EM STAGING
+========================================
+
+--- POST /cidades (criar Curitiba) ---
+{"id":1,"nome":"Curitiba","estado":"PR","criadoEm":"2026-04-21T22:39:31.7134767Z","indicadores":[]}
+HTTP 201
+
+--- POST /cidades (criar Recife) ---
+{"id":2,"nome":"Recife","estado":"PE","criadoEm":"2026-04-21T22:39:31.9344388Z","indicadores":[]}
+HTTP 201
+
+--- POST /cidades/1/indicadores ---
+{"id":1,"cidadeId":1,"cidade":{"id":1,"nome":"Curitiba","estado":"PR","criadoEm":"2026-04-21T22:39:31.713476Z","indicadores":[null]},"tipo":"AreaVerdePerc","valor":35.2,"unidade":"%","dataMedicao":"2026-04-21T00:00:00Z"}
+HTTP 201
+
+--- GET /cidades ---
+[{"id":1,"nome":"Curitiba","estado":"PR","criadoEm":"2026-04-21T22:39:31.713476Z","indicadores":[]},{"id":2,"nome":"Recife","estado":"PE","criadoEm":"2026-04-21T22:39:31.934438Z","indicadores":[]}]
+HTTP 200
+
+--- GET /cidades/1/indicadores ---
+[{"id":1,"cidadeId":1,"cidade":{"id":1,"nome":"Curitiba","estado":"PR","criadoEm":"2026-04-21T22:39:31.713476Z","indicadores":[null]},"tipo":"AreaVerdePerc","valor":35.2000,"unidade":"%","dataMedicao":"2026-04-21T00:00:00Z"}]
+HTTP 200

@@ -1,0 +1,11 @@
+========================================
+  EVIDÊNCIA 2 — HEALTHCHECKS
+========================================
+
+--- STAGING (localhost:8081) ---
+{"status":"ok","db":"up"}
+HTTP 200 in 0.024298s
+
+--- PROD (localhost:8080) ---
+{"status":"ok","db":"up"}
+HTTP 200 in 0.025643s

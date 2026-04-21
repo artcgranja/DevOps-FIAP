@@ -1,0 +1,11 @@
+========================================
+  EVIDÊNCIA 6 — TESTES PASSANDO
+========================================
+
+Test run for /Users/arthurgranja/github/DevOps-FIAP/tests/CidadesEsg.Api.Tests/bin/Debug/net8.0/CidadesEsg.Api.Tests.dll (.NETCoreApp,Version=v8.0)
+VSTest version 17.11.1 (arm64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:     6, Skipped:     0, Total:     6, Duration: 132 ms - CidadesEsg.Api.Tests.dll (net8.0)

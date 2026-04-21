@@ -1,0 +1,17 @@
+========================================
+  EVIDÊNCIA 4 — ISOLAMENTO STAGING ↔ PROD
+========================================
+
+Provando que os DBs estão isolados: criei Curitiba em staging,
+ao consultar prod deve retornar lista vazia.
+
+--- GET /cidades em PROD (deve estar vazio) ---
+[]
+HTTP 200
+
+--- GET /cidades em STAGING (tem 2 cidades) ---
+[{"id":1,"nome":"Curitiba","estado":"PR","criadoEm":"2026-04-21T22:39:31.713476Z","indicadores":[]},{"id":2,"nome":"Recife","estado":"PE","criadoEm":"2026-04-21T22:39:31.934438Z","indicadores":[]}]
+HTTP 200
+
+
+Confirmado: volumes e redes separados.

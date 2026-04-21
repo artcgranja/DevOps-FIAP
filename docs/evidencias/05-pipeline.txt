@@ -1,0 +1,43 @@
+========================================
+  EVIDÊNCIA 5 — PIPELINE CI/CD
+========================================
+
+--- Últimas execuções ---
+completed	success	docs: add README with execution, pipeline, and container instructions	CI/CD	main	push	24750071781	1m19s	2026-04-21T22:37:51Z
+completed	success	ci: add GitHub Actions pipeline (build, test, push to GHCR, deploy in…	CI/CD	main	push	24749984903	1m22s	2026-04-21T22:35:30Z
+completed	success	ci: add GitHub Actions pipeline (build, test, push to GHCR, deploy in…	CI/CD	develop	push	24749914666	1m40s	2026-04-21T22:33:40Z
+
+--- Detalhes do run de main (deploy prod) ---
+
+✓ main CI/CD · 24749984903
+Triggered via push about 4 minutes ago
+
+JOBS
+✓ build-test in 36s (ID 72410721114)
+✓ docker-build-push in 34s (ID 72410798036)
+✓ deploy in 5s (ID 72410866498)
+
+ANNOTATIONS
+! Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, actions/setup-dotnet@v4, actions/upload-artifact@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+build-test: .github#4
+
+! Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, docker/build-push-action@v5, docker/login-action@v3. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+docker-build-push: .github#2
+
+! Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/upload-artifact@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+deploy: .github#2
+
+
+ARTIFACTS
+deploy-instructions-prod
+test-results
+
+For more information about a job, try: gh run view --job=<job-id>
+View this run on GitHub: https://github.com/artcgranja/DevOps-FIAP/actions/runs/24749984903
+
+--- Link do run ---
+https://github.com/artcgranja/DevOps-FIAP/actions/runs/24749984903
+
+--- Pacotes publicados no GHCR ---
+https://github.com/artcgranja?tab=packages
+https://github.com/users/artcgranja/packages/container/package/cidades-esg-api

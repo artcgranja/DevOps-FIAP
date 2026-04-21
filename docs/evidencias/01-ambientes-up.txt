@@ -1,0 +1,27 @@
+========================================
+  EVIDÊNCIA 1 — AMBOS OS AMBIENTES UP
+  Data: Tue Apr 21 19:39:19 -03 2026
+========================================
+
+--- docker ps ---
+NAMES               IMAGE                                        STATUS                        PORTS
+prod-api-1          ghcr.io/artcgranja/cidades-esg-api:prod      Up 36 seconds (healthy)       0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp
+prod-db-1           postgres:16-alpine                           Up 41 seconds (healthy)       0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp
+devops-fiap-api-1   ghcr.io/artcgranja/cidades-esg-api:staging   Up About a minute (healthy)   0.0.0.0:8081->8080/tcp, [::]:8081->8080/tcp
+devops-fiap-db-1    postgres:16-alpine                           Up About a minute (healthy)   0.0.0.0:5433->5432/tcp, [::]:5433->5432/tcp
+
+--- docker network ls ---
+NETWORK ID     NAME                             DRIVER    SCOPE
+13e42270b290   bridge                           bridge    local
+199983106da8   devops-fiap_stg_net              bridge    local
+683618e59c7e   host                             host      local
+2d6509f92b16   none                             null      local
+2f271c1b677b   prod_prod_net                    bridge    local
+d57ed900d2f3   supabase_network_vigil-academy   bridge    local
+
+--- docker volume ls ---
+DRIVER    VOLUME NAME
+local     devops-fiap_pg_data_staging
+local     prod_pg_data_prod
+local     supabase_db_vigil-academy
+local     supabase_storage_vigil-academy
