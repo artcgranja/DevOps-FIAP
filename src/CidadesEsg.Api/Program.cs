@@ -27,6 +27,7 @@ using (var scope = app.Services.CreateScope())
 }
 
 app.MapHealth();
+app.MapCidades();
 
 app.Run();
 
