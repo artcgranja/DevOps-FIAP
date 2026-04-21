@@ -1,0 +1,27 @@
+# .NET
+bin/
+obj/
+out/
+*.user
+*.suo
+*.DotSettings.user
+
+# IDE
+.vs/
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.staging
+.env.prod
+!.env.example
+
+# Test
+TestResults/
+coverage/
+*.trx
