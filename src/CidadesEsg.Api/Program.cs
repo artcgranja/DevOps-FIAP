@@ -1,4 +1,5 @@
 using CidadesEsg.Api.Data;
+using CidadesEsg.Api.Endpoints;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -24,6 +25,8 @@ using (var scope = app.Services.CreateScope())
     if (db.Database.IsRelational() && !app.Environment.IsEnvironment("Testing"))
         db.Database.Migrate();
 }
+
+app.MapHealth();
 
 app.Run();
 
